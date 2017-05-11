@@ -1,0 +1,119 @@
+@import 'normalize.css';
+@import 'main-title.css';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body{
+    background-color: #f0f4f8;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #404040;
+}
+
+a{
+    color: #106090;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+#page-header{
+    height: 100vh;
+    background-color: #404040;
+    background-image: url("../img/my_heart_is_dead_but_still_red_by_nanomortis-d8hpg04.png");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+}
+#page-section{
+    position: relative;
+}
+#page-section .section{
+    height: 100vh;
+    padding: 16px;
+}
+#page-section .section:nth-child(2n ){
+    background-color: white;
+}
+#page-footer{
+    text-align: center;
+    color: white;
+    background-color: #404040;
+    padding: 16px;
+    display: flex;
+
+}
+#page-footer section{margin:0; margin-right: auto;padding: 0;}
+
+.skill-set{
+    display: flex;
+    flex-wrap: wrap;
+}
+.skill-set li {
+    background-color: #404040;
+    color: #FFF;
+    display: block;
+    list-style: none;
+    margin: 16px 16px 0 0;
+    padding: 16px;
+    text-align: justify;
+}
+
+.skill-set li:hover{
+    background-color: #106090;
+}
+
+/**/
+.name-hero {
+    background: rgba(255,255,255,.69);
+    padding: 16px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+.name-hero h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    text-align: center;
+    font-weight: 300;
+    color: #106090;
+    margin: 0;
+}
+.name-hero p{margin: 0;}
+.name-hero h1 em,
+.name-hero p em {
+    color: #bf2b2b;
+    font-style: normal;
+    font-weight: 700;
+}
+.me-img {
+    background: url(../img/ar.svg) no-repeat center center;
+    background-size: 100%;
+    background-position: 0px;
+    height: 150px;
+    margin: 0 auto;
+    position: relative;
+    width: 150px;
+}
+.name-hero .name-text {
+    margin: 0 auto;
+    width: 85%;
+}
+/**/
+
+
+@media screen and (min-width: 800px) {
+    #page-header{width: 350px; position: fixed;}
+    main{margin-left: 350px;}
+    .skill-set {flex-direction: column;}
+}

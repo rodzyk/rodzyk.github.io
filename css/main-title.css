@@ -1,0 +1,39 @@
+/*main title*/
+.main-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  width: 100%;
+  margin: 16px 0;
+  padding: 0;
+  text-align: center;
+  display: block;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.main-title span {
+  display: block;
+  padding: 16px;
+  color: #106090;
+  text-transform: uppercase;
+}
+.main-title:before, 
+.main-title:after {
+  content: '';
+  flex: 1;
+  display: block;
+  width: 100%;
+  border: 1px solid #106090;
+}
+.main-title.left span {
+  order: -1;
+  padding-left: 0;
+}
+.main-title.right span {
+  order: 1;
+  padding-right: 0;
+}
+.main-title.border span {
+  border: 2px solid #106090;
+}
