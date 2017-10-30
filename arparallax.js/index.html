@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>ArParallax.js</title>
+	<meta name="description" content="ArParallax.js is a lightweight customizable jQuery plugin which utilizes CSS3 3D transforms to create a smooth parallax effect on your images when scrolling down or up.">
+	<meta name="keywords" content="ArParallax.js, ArParallax, Parallax.js, jQuery plugin">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<header>
+		<nav>
+			<li>
+				<a class="jump-link" href="#arp">ArP</a>
+			</li>
+			<li>
+				<a class="jump-link" href="#installation">Installation</a>
+			</li>
+			<li>
+				<a class="jump-link" href="#useage">Useage</a>
+			</li>
+			<li>
+				<a class="jump-link" href="#options">Options</a>
+			</li>
+			<li style="margin-left: auto;">
+				<a href="https://github.com/rodzyk/arparallax.js/archive/master.zip">Download</a>
+			</li>
+			<li>
+				<a target="_blank" href="https://github.com/rodzyk/arparallax.js">View on GitHub</a>
+			</li>
+		</nav>
+	</header>
+
+	<div id="arp" style="height: 400px;" class="arparallax">
+		<div class="imageContainer">
+			<img src="img/1.jpeg" class="cover">
+			<div class="content">
+				<div class="me-img"></div>
+				<h1>ArParallax.js</h1>
+			</div>
+		</div>
+	</div>
+
+	<div class="page-content">
+		<p>ArParallax.js is a lightweight customizable jQuery plugin which utilizes CSS3 3D transforms to create a smooth parallax	effect on your images when scrolling down or up.</p>
+
+		<h2 id="installation">Installation</h2>
+		<p>Download and include
+			<code>arparallax.min.js</code> in your document after including jQuery.</p>
+
+		<pre><code>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/arparallax.min.js"&gt;&lt;/script&gt;</code></pre>
+
+		<h2 id="useage">Useage</h2>
+		<h3>HTML</h3>
+		<pre><code>&lt;div class="arparallax"&gt;
+	&lt;div class="imageContainer"&gt;
+		&lt;!-- image or video --&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+		<h3>JS</h3>
+		<pre><code>$('.arparallax').arparallax();</code></pre>
+
+	</div>
+
+	<div class="arparallax">
+		<div class="imageContainer">
+			<video src="video/video.mp4" autoplay loop class="cover"></video>
+			<div class="content">
+				<h1>Use video</h1>
+			</div>
+
+		</div>
+	</div>
+
+
+	<div class="page-content">
+		<h2 id="options">Options</h2>
+		<table class="table">
+			<thead>
+				<tr>
+					<th style="width: 100px;">Name</th>
+					<th style="width: 100px;">type</th>
+					<th style="width: 50px;">default</th>
+					<th>description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<code>speed</code>
+					</td>
+					<td>
+						<code>float</code>
+					</td>
+					<td>
+						<code>0.32</code>
+					</td>
+					<td>The speed at which the parallax effect runs.
+						<code>0.0</code> means the image will appear fixed in place, and
+						<code>1.0</code> the image will flow at the same speed as the page content.</td>
+				</tr>
+				<tr>
+					<td>
+						<code>imageContainer</code>
+					</td>
+					<td>
+						<code>jQuery Selector</code>
+					</td>
+					<td>
+						<code>.image</code>
+					</td>
+					<td>The parallax fx will be prepended into this container.</td>
+				</tr>
+				<tr>
+					<td>
+						<code>blur</code>
+					</td>
+					<td>
+						<code>string</code>
+					</td>
+					<td>
+						<code>auto</code>
+					</td>
+					<td>You can provide the blur effect for your image.
+						<br>Values:
+						<code>auto</code> |
+						<code>both</code> |
+						<code>up</code> |
+						<code>bottom</code> |
+						<code>none</code>.</td>
+				</tr>
+
+				<tr>
+					<td>
+						<code>blurMultiplier</code>
+					</td>
+					<td>
+						<code>number</code>
+					</td>
+					<td>
+						<code>1</code>
+					</td>
+					<td>You can specify a multiplier for the blur effect.</td>
+				</tr>
+
+				<tr>
+					<td>
+						<code>scaleMultiplier</code>
+					</td>
+					<td>
+						<code>number</code>
+					</td>
+					<td>
+						<code>0.05</code>
+					</td>
+					<td>You can specify a multiplier for the scale effect.
+						<br>
+						<code>0</code>for disable effect.</td>
+				</tr>
+
+				<tr>
+					<td>
+						<code>depth</code>
+					</td>
+					<td>
+						<code>string</code>
+					</td>
+					<td>
+						<code>direct</code>
+					</td>
+					<td>You can provide the perspective for your image.
+						<br>Values:
+						<code>direct</code> |
+						<code>reverse</code> |
+						<code>none</code>.
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+
+	<div class="arparallax">
+		<div class="imageContainer">
+			<img src="img/2.jpeg" class="cover">
+			<div class="content">
+				<h1>Enjoy!</h1>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div>
+			ArParallax.js © 2017
+			<a href="https://rodzyk.github.io">Andriy Rodzyk</a> released under
+			<a href="https://github.com/rodzyk/arparallax.js/blob/master/LICENSE">MIT license</a>
+			<br> All images taken from PIXELS are
+			<a href="https://www.pexels.com/photo-license/">public domain</a>.
+		</div>
+	</footer>
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+	<script src="js/arparallax.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>
