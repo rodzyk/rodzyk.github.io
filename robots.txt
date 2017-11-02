@@ -1,0 +1,5 @@
+User-agent: *
+
+Disallow: 
+
+Sitemap: https://rodzyk.github.io/sitemap.xml
