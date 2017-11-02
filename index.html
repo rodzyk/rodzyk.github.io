@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Personal website of Andriy Rodzyk">
@@ -17,7 +18,7 @@
             top: 0;
             right: 0;
             bottom: 0;
-            background: rgba(16,16,16,.4);
+            background: rgba(16, 16, 16, .4);
             z-index: 100500;
             display: flex;
             justify-content: center;
@@ -25,24 +26,28 @@
         }
 
         #page-preloader .spinner {
-            width:  64px;
+            width: 64px;
             height: 64px;
-            background: url('/img/pufff.svg') no-repeat;            
             border-radius: 50%;
             border: 4px solid #166496;
             border-width: 0 0 0 4px;
             animation: 200ms rotate linear infinite;
         }
-        @keyframes rotate{
-            0%{transform: rotateZ(0deg);}
-            100%{transform: rotateZ(180deg);}
+
+        @keyframes rotate {
+            0% {
+                transform: rotateZ(0deg);
+            }
+            100% {
+                transform: rotateZ(180deg);
+            }
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script>
         $(window).on('load', function () {
             var $preloader = $('#page-preloader'),
-                $spinner   = $preloader.find('.spinner');
+                $spinner = $preloader.find('.spinner');
             $spinner.fadeOut();
             $preloader.delay(0).fadeOut('500ms');
             // $('#blur_wrap');
@@ -50,37 +55,48 @@
         });
     </script>
 </head>
+
 <body>
-    <div id="page-preloader"><span class="spinner"></span></div>
+    <div id="page-preloader">
+        <span class="spinner"></span>
+    </div>
     <div id="blur_wrap" class="blur">
-            <header id="page-header" class="flex_center">
+        <header id="page-header" class="flex_center">
 
-                    <div class="acrylic">
-                        <div class="acrylic_wrap"></div>
-                        <div class="acrylic_text flex_center">
-                            <div class="name-hero" itemscope itemtype="http://schema.org/Organization">
-                                <div class="me-img"></div>
-                                <div class="name-text">
-                                    <h1 itemprop="name">Andriy <em>Rodzyk</em></h1>
-                                    <p><em>Web</em> developer</p>
-                                    <p><a itemprop="email" href="mailto:rodzyk@programmer.net">rodzyk@programmer.net</a></p>
+            <div class="acrylic">
+                <div class="acrylic_wrap"></div>
+                <div class="acrylic_text flex_center">
+                    <div class="name-hero" itemscope itemtype="http://schema.org/Organization">
+                        <div class="me-img"></div>
+                        <div class="name-text">
+                            <h1 itemprop="name">Andriy
+                                <em>Rodzyk</em>
+                            </h1>
+                            <p>
+                                <em>Web</em> developer</p>
+                            <p>
+                                <a itemprop="email" href="mailto:rodzyk@programmer.net">rodzyk@programmer.net</a>
+                            </p>
 
-                                    <p><a itemprop="sameAs" href="http://www.facebook.com/rodzyk">FB</a>
-                                        
-                                    </p>
-                                    <p><a itemprop="sameAs" href="http://www.twitter.com/rodzyk">Twitter</a></p>
+                            <p>
+                                <a itemprop="sameAs" href="http://www.facebook.com/rodzyk">FB</a>
 
-                                </div>                
-                            </div>
+                            </p>
+                            <p>
+                                <a itemprop="sameAs" href="http://www.twitter.com/rodzyk">Twitter</a>
+                            </p>
+
                         </div>
                     </div>
-                    
-            </header>
-            <main>
-                <section id="page-section">
+                </div>
+            </div>
+
+        </header>
+        <main>
+            <section id="page-section">
                 <section class="section">
                     <h2 class="main-title left">
-                        <span>Technical Skills</span> 
+                        <span>Technical Skills</span>
                     </h2>
                     <ul class="skill-set">
                         <li>Adobe Photoshop</li>
@@ -93,7 +109,7 @@
                 </section>
                 <section class="section">
                     <h2 class="main-title left">
-                        <span>Personal Interests</span> 
+                        <span>Personal Interests</span>
                     </h2>
                     <ul class="skill-set">
                         <li>Music</li>
@@ -101,18 +117,37 @@
                     </ul>
                 </section>
             </section>
+
+            <article class="project arparallax">
+                <img src="arparallax.js/img/1.jpeg" alt="ArParallax.js" class="cover imageContainer">
+                <div class="content">
+                    <h1>
+                        <a href="./arparallax.js/">ArParallax.js</a>
+                    </h1>
+                </div>
+            </article>
+
             <footer id="page-footer">
                 <section>
                     <img src="img/ar.svg" width="64px" alt="Andriy Rodzyk">
                 </section>
                 <section>
-                    <small><a href="http://vk.me/rodzyk">Andriy Rodzyk</a> 2017</small><br />
                     <small>
-                        <small>Background art by <a href="http://nanomortis.deviantart.com">NanoMortis</a></small>
+                        <a href="http://vk.me/rodzyk">Andriy Rodzyk</a> 2017</small>
+                    <br />
+                    <small>
+                        <small>Background art by
+                            <a href="http://nanomortis.deviantart.com">NanoMortis</a>
+                        </small>
                     </small>
                 </section>
             </footer>
-            </main>
+        </main>
     </div>
+    <script src="arparallax.js/js/arparallax.min.js"></script>
+    <script>
+        $('.arparallax').arparallax();
+    </script>
 </body>
+
 </html>
